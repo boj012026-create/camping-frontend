@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react'
+import hrp from 'html-react-parser';
 
 interface Post {
   id: number
-  title: { rendered: string }
-  content: { rendered: string }
+  acf: {
+    cabin_name: string
+    price_a_night: number;
+  }
 }
 
 function App() {
@@ -24,7 +27,8 @@ function App() {
       {posts.map((post) => (
         <article key={post.id}>
           <h2>{post.title.rendered}</h2>
-          <p>{post.content.rendered}</p>
+          <h2>{post.acf?.price_a_night}</h2>
+          <p>{post.acf?.cabin_description}</p>
         </article>
         )
       )}
