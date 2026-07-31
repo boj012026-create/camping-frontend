@@ -23,9 +23,9 @@ function App() {
   return (
     <>
     <h1> Hytter</h1>
-    <div>
+    <div className="flex flex-row">
       {posts.map((post) => (
-        <article key={post.id}>
+        <article className="flex flex-row" key={post.id}>
           <h2>{post.title.rendered}</h2>
           <h2>{post.acf?.price_a_night}</h2>
           <p>{post.acf?.cabin_description}</p>
