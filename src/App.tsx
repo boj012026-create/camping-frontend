@@ -22,11 +22,11 @@ function App() {
 
   return (
     <>
-    <h1> Hytter</h1>
-    <div className="flex flex-row">
+    <h1 className="text-6xl"> Hytter</h1>
+    <div className="flex flex-wrap justify-around gap-8">
       {posts.map((post) => (
-        <article className="flex flex-row" key={post.id}>
-          <h2>{post.title.rendered}</h2>
+        <article className="flex flex-col items-start" key={post.id}>
+          <h2 className="text-4xl">{post.title.rendered}</h2>
           <h2>{post.acf?.price_a_night}</h2>
           <p>{post.acf?.cabin_description}</p>
         </article>
