@@ -20,7 +20,7 @@ function App() {
     <div className="flex flex-wrap justify-around gap-8">
       {cabins.map((cabin) => (
         <article className="flex flex-col items-start" key={cabin.id}>
-          <h2 className="text-4xl">{cabin.acf.cabin_name}</h2>
+          <h2 className="text-4xl">{cabin.title.rendered}</h2>
           <h2>{cabin.acf.price_a_night}</h2>
           <p>{cabin.acf.cabin_description}</p>
         </article>
