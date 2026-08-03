@@ -20,9 +20,9 @@ export default function Cabin() {
       {cabins.map((cabin) => (
         <article className="flex flex-col items-start" key={cabin.id}>
           <h2 className="text-4xl">{cabin.title.rendered}</h2>
-          <h2>{cabin.acf.price_a_night}</h2>
-          <p>{cabin.acf.cabin_description}</p>
-        <img src={cabin.acf?.Cabin_picture}></img>
+          <h2>{cabin.acf.price}</h2>
+          <p>{cabin.acf.description}</p>
+        <img src={cabin.acf?.imgurl}></img>
         </article>
         )
       )}

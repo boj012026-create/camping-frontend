@@ -4,9 +4,9 @@ export default interface Cabin {
    rendered: string
   }
   acf: {
-    cabin_name: string
-    price_a_night: number
-    cabin_description: string
-    Cabin_picture: string
+    name: string
+    price: number
+    description: string
+    imgurl: string
   }
 }
