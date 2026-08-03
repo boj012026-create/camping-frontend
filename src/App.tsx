@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
 import type CabinInterface from './interfaces/Cabin.interface.ts'
-import 'services/wpApi.ts'
 import hrp from 'html-react-parser';
-
+import Cabin from './components/Cabin.tsx'
 
 function App() {
   const [cabins, setCabins] = useState<CabinInterface[]>([])
@@ -17,17 +16,7 @@ function App() {
 
   return (
     <>
-    <h1 className="text-6xl"> Hytter</h1>
-    <div className="flex flex-wrap justify-around gap-8">
-      {cabins.map((cabin) => (
-        <article className="flex flex-col items-start" key={cabin.id}>
-          <h2 className="text-4xl">{cabin.title.rendered}</h2>
-          <h2>{cabin.acf.price_a_night}</h2>
-          <p>{cabin.acf.cabin_description}</p>
-        </article>
-        )
-      )}
-     </div> 
+     <Cabin />
     </>
   )
 }
