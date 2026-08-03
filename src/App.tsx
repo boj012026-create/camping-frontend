@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import type CabinInterface from './interfaces/Cabin.interface.ts'
+import 'services/wpApi.ts'
 import hrp from 'html-react-parser';
 
 
