@@ -7,5 +7,6 @@ export default interface Cabin {
     cabin_name: string
     price_a_night: number
     cabin_description: string
+    Cabin_picture: string
   }
 }

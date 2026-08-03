@@ -22,6 +22,7 @@ export default function Cabin() {
           <h2 className="text-4xl">{cabin.title.rendered}</h2>
           <h2>{cabin.acf.price_a_night}</h2>
           <p>{cabin.acf.cabin_description}</p>
+        <img src={cabin.acf?.Cabin_picture}></img>
         </article>
         )
       )}
