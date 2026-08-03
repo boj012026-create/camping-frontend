@@ -1,22 +1,16 @@
 import { useEffect, useState } from 'react'
+import type CabinInterface from './interfaces/Cabin.interface.ts'
 import hrp from 'html-react-parser';
 
-interface Post {
-  id: number
-  acf: {
-    cabin_name: string
-    price_a_night: number;
-  }
-}
 
 function App() {
-  const [posts, setPosts] = useState<Post[]>([])
+  const [cabins, setCabins] = useState<CabinInterface[]>([])
   const url: string = "/wp-json/wp/v2/posts";
 
   useEffect( () => {
     fetch(url)
       .then(res => res.json())
-      .then(data => setPosts(data))
+      .then(data => setCabins(data))
       .catch((err) => console.error('error fetching cabins:', err))
   }, []);
 
@@ -24,11 +18,11 @@ function App() {
     <>
     <h1 className="text-6xl"> Hytter</h1>
     <div className="flex flex-wrap justify-around gap-8">
-      {posts.map((post) => (
-        <article className="flex flex-col items-start" key={post.id}>
-          <h2 className="text-4xl">{post.title.rendered}</h2>
-          <h2>{post.acf?.price_a_night}</h2>
-          <p>{post.acf?.cabin_description}</p>
+      {cabins.map((cabin) => (
+        <article className="flex flex-col items-start" key={cabin.id}>
+          <h2 className="text-4xl">{cabin.acf.cabin_name}</h2>
+          <h2>{cabin.acf.price_a_night}</h2>
+          <p>{cabin.acf.cabin_description}</p>
         </article>
         )
       )}
