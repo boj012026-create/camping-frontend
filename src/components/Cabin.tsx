@@ -1,10 +1,12 @@
-
+import { test } from '../services/wpGqlA.ts'
 import { useEffect, useState } from 'react'
 import type CabinInterface from '../interfaces/Cabin.interface.ts'
 
 export default function Cabin() {
   const [cabins, setCabins] = useState<CabinInterface[]>([])
   const url: string = "/wp-json/wp/v2/posts";
+
+//  test();
 
   useEffect( () => {
     fetch(url)
