@@ -6,7 +6,7 @@ export default function Cabin() {
   const [cabins, setCabins] = useState<CabinInterface[]>([])
   const url: string = "/wp-json/wp/v2/posts";
 
-//  test();
+  test();
 
   useEffect( () => {
     fetch(url)

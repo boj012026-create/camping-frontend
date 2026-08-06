@@ -10,11 +10,16 @@ export default defineConfig({
   ],
   server: {
     proxy: {
-      '/local': {
+      '/wp-json': {
         target: 'http://lone-camping.local/',
         changeOrigin: true,
         secure: false,
       },
+      '/graphql': {
+        target: 'http://lone-camping.local/',
+        changeOrigin: true,
+        secure: false,
+      }
     },
   },
 })
