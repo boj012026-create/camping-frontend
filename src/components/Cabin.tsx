@@ -1,8 +1,13 @@
-import { test } from '../services/wpGqlA.ts'
+import { test, query } from '../services/wpGqlA.ts'
 import { useEffect, useState } from 'react'
 import type CabinInterface from '../interfaces/Cabin.interface.ts'
+import { useQuery } from '@apollo/client/react'
 
 export default function Cabin() {
+  const { loading, error, data } = useQuery(query.cabins)
+  //if(loading) return <p>Laster Hytter</p>;
+  //if(error) return <p>Feil ved lasting: {error.message}</p>
+
   const [cabins, setCabins] = useState<CabinInterface[]>([])
   const url: string = "/wp-json/wp/v2/posts";
 
