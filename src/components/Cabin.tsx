@@ -5,8 +5,8 @@ import { useQuery } from '@apollo/client/react'
 
 export default function Cabin() {
   const { loading, error, data } = useQuery(query.cabins)
-  //if(loading) return <p>Laster Hytter</p>;
-  //if(error) return <p>Feil ved lasting: {error.message}</p>
+  if(loading) return <p>Laster Hytter</p>;
+  if(error) return <p>Feil ved lasting</p>
 
 
   //test();
