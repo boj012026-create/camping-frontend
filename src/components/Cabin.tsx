@@ -8,8 +8,6 @@ export default function Cabin() {
   //if(loading) return <p>Laster Hytter</p>;
   //if(error) return <p>Feil ved lasting: {error.message}</p>
 
-  const [cabins, setCabins] = useState<CabinInterface[]>([])
-  const url: string = "/wp-json/wp/v2/posts";
 
   //test();
 
