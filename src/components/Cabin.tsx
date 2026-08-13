@@ -1,5 +1,4 @@
-import { test, query } from '../services/wpGqlA.ts'
-import { useEffect, useState } from 'react'
+import { query } from '../services/wpGqlA.ts'
 import type CabinInterface from '../interfaces/Cabin.interface.ts'
 import { useQuery } from '@apollo/client/react'
 
