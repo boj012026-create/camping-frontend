@@ -1,1 +1,9 @@
-@import "tailwindcss"
+@import "tailwindcss";
+/*
+div {
+	display: grid;
+	width: 100vw;
+	grid-template-columns: repeat(2, minmax(0, 1fr));	
+	background-color: yellow;
+}
+*/

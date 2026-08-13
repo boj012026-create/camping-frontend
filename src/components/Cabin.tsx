@@ -12,11 +12,12 @@ export default function Cabin() {
   //test();
 
   return (
-    <section>
+    <>
+    <section className="flex flex-col justify-center">
     <h1 className="text-7xl text-center"> Hytter</h1>
-    <div className="flex flex-wrap justify-around gap-8">
+    <div className="grid grid-cols-2 align-items-end justify-items-start">
       {data?.posts?.nodes?.map((n) => (
-        <article id={n.id} className="w-1/3">
+        <article id={n.id} className="">
           <h2 className="text-4xl">{n.hytte.cabin}</h2>
           <img src={n.hytte.imgurl.node.sourceUrl} />
           <p>{n.hytte.description}</p>
@@ -25,5 +26,6 @@ export default function Cabin() {
       ))}
      </div> 
     </section>
+    </>
   )
 }
