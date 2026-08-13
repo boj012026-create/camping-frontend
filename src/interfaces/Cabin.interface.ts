@@ -1,12 +1,18 @@
 export default interface Cabin {
-  id: number
-  title: {
-   rendered: string
-  }
-  acf: {
-    name: string
-    price: number
-    description: string
-    imgurl: string
-  }
+  posts: {
+    nodes: {
+      id: string;
+      hytte: {
+        cabin: string;
+        description: string;
+        price: number;
+        imgurl: {
+          node: {
+            sourceUrl: string;
+            altText: string;
+          };
+        };
+      };
+    }[];
+  };
 }

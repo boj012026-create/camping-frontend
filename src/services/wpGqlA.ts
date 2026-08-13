@@ -7,7 +7,7 @@ export const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-export const query= {
+export const query = {
   cabins: gql`
     query GetLatestPosts {
       posts {
