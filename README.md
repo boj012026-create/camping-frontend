@@ -1,4 +1,4 @@
-# Remake of a local camping website
+# Camping Cabin preview
 Headless wordpress as cms, and react as frontend
 
 ## start
