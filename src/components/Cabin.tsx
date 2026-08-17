@@ -20,7 +20,9 @@ export default function Cabin() {
       bg-gradient-to-bl
         from-blue-100
         to-blue-400
-    ">
+    "
+    style={{ backgroundImage: `url('${wpData.posts.nodes[0].hytte.imgurl.node.sourceUrl}')`}}
+    >
     <h1 className="text-7xl text-center"> Hytter</h1>
     <div className="
       flex
@@ -38,22 +40,22 @@ export default function Cabin() {
             flex-col
             gap-6
             p-8
-          bg-amber-500/30
+          bg-amber-200/10
           rounded-3xl
           drop-shadow-1xl
           backdrop-blur-md
           border-white/25
-          " style={{ backgroundImage: `url('${n.hytte.imgurl.node.sourceUrl}')`}}>
+          " >
           <h2 className="text-4xl">{n.hytte.cabin}</h2>
           <img src={n.hytte.imgurl.node.sourceUrl} className="
           border-4
-          border-green-200/50
+          border-green-200/10
           rounded-3xl
           aspect-square
           " />
           <p className="
             rounded-3xl
-            bg-green-200/50
+            bg-green-200/10
             text-center
             p-4
           ">{n.hytte.description}</p>

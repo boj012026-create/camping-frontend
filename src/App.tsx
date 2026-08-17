@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-     <Cabin className="bgteal-200"/>
+     <Cabin />
     </>
   )
 }
