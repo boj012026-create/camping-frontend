@@ -41,7 +41,9 @@ export default function Cabin() {
           bg-amber-500/30
           rounded-3xl
           drop-shadow-1xl
-          ">
+          backdrop-blur-md
+          border-white/25
+          " style={{ backgroundImage: `url('${n.hytte.imgurl.node.sourceUrl}')`}}>
           <h2 className="text-4xl">{n.hytte.cabin}</h2>
           <img src={n.hytte.imgurl.node.sourceUrl} className="
           border-4
