@@ -15,7 +15,7 @@ export default function Cabin() {
     <>
     <section className="flex flex-col justify-center">
     <h1 className="text-7xl text-center"> Hytter</h1>
-    <div className="grid grid-cols-2 align-items-end justify-items-start">
+    <div className="grid gap-4 grid-cols-2 align-items-end justify-items-start">
       {wpData.posts.nodes.map((n: any) => (
         <article id={n.id} className="">
           <h2 className="text-4xl">{n.hytte.cabin}</h2>
