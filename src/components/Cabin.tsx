@@ -23,7 +23,9 @@ export default function Cabin() {
     ">
     <h1 className="text-7xl text-center"> Hytter</h1>
     <div className="
-      grid
+      flex
+        flex-col
+      lg:grid
         gap-4
         m-8
         grid-cols-2
@@ -38,6 +40,7 @@ export default function Cabin() {
             p-8
           bg-amber-500/30
           rounded-3xl
+          drop-shadow-1xl
           ">
           <h2 className="text-4xl">{n.hytte.cabin}</h2>
           <img src={n.hytte.imgurl.node.sourceUrl} className="
