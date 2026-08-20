@@ -23,7 +23,14 @@ export default function Cabin() {
     "
     style={{ backgroundImage: `url('${wpData.posts.nodes[0].hytte.imgurl.node.sourceUrl}')`}}
     >
-    <h1 className="text-7xl text-center"> Hytter</h1>
+    <h1 className="
+      w-fit
+      text-7xl
+      p-6
+      m-6
+      backdrop-blur-md
+      rounded-4xl
+    "> Hytter</h1>
     <div className="
       flex
         flex-col
