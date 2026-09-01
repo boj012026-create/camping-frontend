@@ -1,15 +1,14 @@
 import { query } from '../services/wpGqlA.ts'
-import type CabinInterface from '../interfaces/Cabin.interface.ts'
+import type Cabin from '../interfaces/Cabin.interface.ts'
 import { useQuery } from '@apollo/client/react'
+import demo from '../assets/json/demo.json'
 
 export default function Cabin() {
   const { loading, error, data } = useQuery(query.cabins)
-  const wpData = data as CabinInterface | undefined;
   if(loading) return <p>Laster Hytter</p>;
-  if(error) return <p>Feil ved lasting</p>
-
-
-  //test();
+  
+  //fallback to demo data if no contact back-end
+  const wpData: Cabin | undefined = (error || !data) ? demo.data : data
 
   return (
     <>

@@ -1,5 +1,5 @@
 export default interface Cabin {
-  posts: {
+  posts?: {
     nodes: {
       id: string;
       hytte: {
