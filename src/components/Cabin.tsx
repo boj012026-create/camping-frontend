@@ -20,7 +20,7 @@ export default function Cabin() {
         from-blue-100
         to-blue-400
     "
-    style={{ backgroundImage: `url('${wpData.posts.nodes[0].hytte.imgurl.node.sourceUrl}')`}}
+    style={{ backgroundImage: `url('${wpData?.posts?.nodes[0]?.hytte.imgurl.node.sourceUrl}')`}}
     >
     <h1 className="
       w-fit
@@ -40,7 +40,7 @@ export default function Cabin() {
         align-items-end
         justify-items-start
     ">
-      {wpData.posts.nodes.map((n: any) => (
+      {wpData.posts?.nodes.map((n: any) => (
         <article id={n.id} className="
           flex
             flex-col
