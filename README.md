@@ -2,9 +2,10 @@
 Headless wordpress as cms, and react as frontend
 
 ## start
+```shel
 npm install
 npm run dev
-
+```
 ## tailwind
 ```shell
 pnpm install tailwindcss @tailwindcss/vite
