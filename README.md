@@ -25,19 +25,19 @@ npm run <Command>
 | build   | builds project |
 | preview | runs a latest build |
 ## Architecture
-### wordpress as headles cms
-many custommers are used to their interface.
+### Wordpress as headles cms
+many customers are used to this interface.
 ### Vite React
 my main tech stack,
 # Goals
-## practize
+## practice
 using tokens, setting up login, connecting to database.  
 (dead ends took to much time to get to practice these goals)
 ## learn
 #### Typescript and Tailwind
-they are used alot in the field.
-Typescript prevents alot of bugs, when for correct types
-Tailwind speeds up styling
+- they are used alot in the field.
+- Typescript prevents alot of bugs, when for correct types
+- Tailwind speeds up styling
 
 # What I learned
 - Set a project on hold if it doesn't serve it's purpose.
@@ -50,6 +50,10 @@ Tailwind speeds up styling
 - The GraphQl plugin turns 7 api calls for one resource into 1, and formats api better
 ## React
 - Apollo client returns useStates for data loading and error, making updating data seamless
+## Tailwind
+- tailwind classes works as paramaters
+- syntax is quite consistent
+- cheatsheets get you far, but concepts like linear gradient is fastest to learn with documentation
 # Notes to myself about setup
 pnpm install tailwindcss @tailwindcss/vite
 ## vite.config.js
